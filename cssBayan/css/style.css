@@ -4,9 +4,6 @@
 body {
   background-color: gray;
 }
-label {
-  cursor: pointer;
-}
 
 .wrapper {
   text-align: center;
@@ -26,7 +23,7 @@ span {
 }
 
 .wrapper label input[type="radio"]:checked + .content .content-img > img {
-  max-height: none;
+  max-height: 100vh;
   transition: 0.5s;
   transform: scale(1);
 }
@@ -39,6 +36,10 @@ span {
   transition: 0.5s;
   transform: scale(1);
   transform: rotate(90deg);
+}
+
+.wrapper label input[type="radio"]:checked + .content h2 {
+  color: blue;
 }
 
 /* MOBILE */
@@ -65,13 +66,13 @@ span {
 /* TABLET */
 @media (min-width: 820px) {
   h1 {
-    font-size: 4rem;
+    font-size: 3rem;
   }
   .wrapper {
     width: 70%;
   }
   h2 {
-    font-size: 2rem;
+    font-size: 1.5rem;
   }
   .content-img {
     padding-bottom: 3vh;
@@ -80,14 +81,17 @@ span {
 
 /* DESKTOP */
 @media (min-width: 1920px) {
+  label {
+    cursor: pointer;
+  }
   h1 {
-    font-size: 6rem;
+    font-size: 4rem;
   }
   .wrapper {
     width: 60%;
   }
   h2 {
-    font-size: 3rem;
+    font-size: 2rem;
     color: black;
   }
   h2:hover {
@@ -104,8 +108,5 @@ span {
 
   .wrapper:hover span {
     display: block;
-  }
-
-  .content:hover .content-img {
   }
 }
